@@ -106,7 +106,7 @@ with tab2:
 
                 # Text Matrix Processing
                 X_text_live = tfidf.transform([body])
-                X_numeric_live = [[urls, body_len, subject_len, has_urgent_word, receiver_count, is_internal_domain]]
+                X_numeric_live = [[urls, body_len, subject_len, has_urgent_word, receiver_count]]
                 X_combined_live = sp.hstack((X_numeric_live, X_text_live))
                 st.write(f"Columns your model expects: {rf_model.n_features_in_}")
                 st.write(f"Columns you are sending right now: {X_combined_live.shape[1]}")
