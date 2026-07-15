@@ -66,6 +66,8 @@ with tab1:
         """)
 
 # ==================== TAB 2: LIVE PREDICTION SANDBOX ====================
+st.write(f"Columns your model expects: {rf_model.n_features_in_}")
+st.write(f"Columns you are sending right now: {X_combined_live.shape[1]}")
 with tab2:
     st.header("2. Live Model Prediction Sandbox")
     st.write("Input email details below to test how the trained Random Forest classifier evaluates the data in real-time.")
